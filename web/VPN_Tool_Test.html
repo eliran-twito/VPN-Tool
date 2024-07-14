@@ -18,7 +18,7 @@
        data-shift=".shifted-content">
     <div class="sidebar-header" data-image="images/sb-bg-1.jpg">
         <div class="avatar">
-            <img src="images/anon_logo.png">
+            <img src="images/checkpoint.png">
         </div>
         <span class="title fg-white">VPN TOOL</span>
         <span class="subtitle fg-white"> 2023 © Eliran Twito</span>
@@ -64,8 +64,8 @@
             Search for an issue
                 <select data-role="select" id="select1">
                         <optgroup label="Route Based">
-                            <option id="bgp1" value="BGP">BGP - no bgp routes</option>
-                            <option id="ospf1" value="OSPF">OSPF - no OSPF routes</option>
+                            <option id="bgp1" value="BGP">Route Based BGP - no bgp routes</option>
+                            <option id="ospf1" value="OSPF">Route Based OSPF - no ospf routes</option>
                         </optgroup>
                         <optgroup label="FWAccel">
                                 <option value="Acceleration">Acceleration issues</option>
@@ -141,17 +141,19 @@
 
     </div>
         <div id="bgp1_in" style="display: none;margin-left: 10%;margin-top: 3%; z-index: -2;">
-                <h3>BGP - no bgp routes </h3>
-            <p>1.Review your configuration, make sure you have the right external remote-as peer configured,</br> if you use routemaps check if you allow the these routes,</br> distributing the right routes.</br>You coul'd use the script generator to review your configuration.</p>
-                <p>2.tcpdump port 179 to see bgp traffic</p>
-                <p>3.For more information use sk101399</p>
+                <h3>Route Based BGP - no bgp routes </h3>
+            <p>1.Review your configuration ,make sure you are using "empty groups", make sure you have the right external remote-as peer configured,</br> if you use routemaps check if you allow these routes,</br> distributing the right routes.</br>You coul'd use the script generator to review your configuration.</p>
+                <p>2.Use "fwmonitor" to see if the connection passes through the VPN tunnel interface </p>
+                <p>3.tcpdump port 179 to see bgp traffic</p>
+                <p>4.For more information use sk101399</p>
 
             </div>
        <div id="ospf1_in" style="display: none;margin-left: 10%;margin-top: 3%; z-index: -2;">
-                <h3>OSPF - no OSPF routes </h3>
-            <p>1.Review your configuration, make sure you have the right external remote-as peer configured,</br> if you use routemaps check if you allow the these routes,</br> distributing the right routes.</br>You coul'd use the script generator to review your configuration.</p>
-                <p>2.tcpdump port 179 to see bgp traffic</p>
-                <p>3.For more information use sk101399</p>
+                <h3>Route Based OSPF - no OSPF routes </h3>
+            <p>1.Review your configuration,make sure you are using "empty groups", make sure you have the right external remote-as peer configured,</br> if you use routemaps check if you allow these routes,</br> distributing the right routes.</br>You coul'd use the script generator to review your configuration.</p>
+                <p>2.Use "fwmonitor" to see if the connection passes through the VPN tunnel interface </p>
+                <p>3.tcpdump port 89 to see OSPF traffic</p>
+                <p>4.For more information use sk84520</p>
 
             </div>
        <div id="bgp1_script_in" style="display: none;margin-left: 10%;margin-top: 3%;">
