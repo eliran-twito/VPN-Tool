@@ -3,11 +3,11 @@ name: Xray Scan
 on:
   push:
     branches:
-      - main  # or your default branch
+      - master
 
 jobs:
   scan:
-    runs-on: windows-latest  # Runs the job on Windows
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
