@@ -1,0 +1,23 @@
+name: Xray Scan
+
+on:
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  scan:
+    runs-on: windows-latest  # Runs the job on Windows
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JFrog CLI
+        uses: jfrog/setup-jfrog-cli-action@v1
+
+      - name: Configure JFrog CLI
+        run: jfrog rt c --url YOUR_ARTIFACTORY_URL --user ${{ secrets.JFROG_USER }} --password ${{ secrets.JFROG_PASSWORD }}
+
+      - name: Run JFrog Xray scan
+        run: jfrog rt xray <your-artifact-repo-name> --fail-fast --output json
