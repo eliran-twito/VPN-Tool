@@ -7,6 +7,7 @@ class Generator(object):
         self.P_Name = P_Name
 
 
+
     def bgp_get_script(self):
         return '</br>' '<b>'"Numbered VTI:"'</b>' \
             '</br>' "add vpn tunnel 10 type numbered local " + str(self.S_IP) + " remote " + str(self.P_IP) + " peer " + str(self.P_Name) + \

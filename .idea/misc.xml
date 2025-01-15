@@ -3,5 +3,25 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.7 (ITsafe)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (ITsafe)" project-jdk-type="Python SDK" />
+  <component name="CiFilterState">
+    <option name="selectedSeverities">
+      <map>
+        <entry key="Critical" value="true" />
+        <entry key="High" value="true" />
+        <entry key="Medium" value="true" />
+        <entry key="Low" value="true" />
+        <entry key="Information" value="true" />
+        <entry key="Unknown" value="true" />
+        <entry key="Pending" value="true" />
+        <entry key="Normal" value="true" />
+      </map>
+    </option>
+    <option name="selectedLicences">
+      <map />
+    </option>
+    <option name="selectedScopes">
+      <map />
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11" project-jdk-type="Python SDK" />
 </project>
